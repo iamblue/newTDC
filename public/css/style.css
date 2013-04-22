@@ -16,3 +16,12 @@ a {
 	-o-background-size:cover;*/
 	background-size:cover;
 }
+.gm{
+	width: 130px;
+	height: 175px;
+	top:660px;
+	left: 50%;
+	position: absolute;
+	background-image: url('../img/gm.gif')
+
+}

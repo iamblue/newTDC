@@ -3,30 +3,59 @@
 	<head>
 		<title>台北設計之都</title>
 		<link rel='stylesheet' href='/css/style.css' />
+		<link rel='stylesheet' href='/css/animate.css' />
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	</head>
 	<body>
+		<div class="startdoor animated fadeInUp"></div>
 		<div class="bg">
-			<div class="gm"></div>
+			<div id="gm"></div>
 		</div>
 	</body>
 	<script type="text/javascript">
 		var wWidth = $(window).width();
-		console.log(wWidth);
+		// console.log(wWidth);
+		var af_ed = 0;
+		// $('#gm').css({
+		// 		'top':200,'right':0,
+		//  	})
 		$(window).bind('scroll',function(e){
 		 	//console.log(e)
-		 	var scrolled = $(window).scrollTop();
-		 	console.log(scrolled)
-		 	var aaa =(50-((scrolled/wWidth)*10))+'%';
-		 	console.log(aaa);
-			$('.gm').css({'top':175+scrolled,'left':(50-(scrolled/wWidth)*10)+'%'});
-			if (scrolled>= 658){
-				$('.gm').css({'top':175+scrolled,'left':(50+(scrolled/wWidth)*10)+'%'});
-			}
-
-
+		 	var s = $(window).scrollTop();
+		 	// console.log(s)
+		 	/* 計算 */
+		 	//var st1_sl = 684/1206;
+		 	/* 預設 */
+		 	//var aaa =(50-((scrolled/wWidth)*100))+'%';
+		 	//console.log(aaa);
+		 	// console.log((s/684.37)*1205.85 );
+		 	var t = .5*wWidth;
+		 	if(s<= 678){
+		 		// $('#gm').css({
+		 		// 	top:200+((scrolled-50)*(684.37/430)),right:0+(scrolled-170)*(1205.85/430),
+		 		// 	'display':'block'
+		 		// });
+				// $('.startdoor').css({'right':aaa})
+				$('.bg').css({'right':t-((s/684.37)*1205.85)})	
+		 	}
+		 	if(s> 678 && s<=1184){
+		 		//console.log(st1+((s/451.46)*806.17))
+				$('.bg').css({'right':(((s-684.37)/451.46)*806.17)-t})
+		 	}
+		 	if(s> 1184 && s<=1380){
+		 		$('.bg').css({'right':t-(((s-684.37-451.46+200)/230.5)*411.61)})	
+		 	}
+		 	if(s> 1380 && s<= 1854){
+		 		$('.bg').css({'right':(((s-684.37-451.46+200-230)/129)*230.37-t)})	
+		 	}
+		 	if(s> 1584 && s<= 1881){
+		 		$('.bg').css({'right':t-(((s-684.37-451.46+200-230-129)/313.66)*560.12)})	
+		 	}
+		 	if(s> 1881){
+		 		$('.bg').css({'right':((s-684.37-451.46+200-230-129-313.66-200)/159.92)*285.58-t})	
+		 	}
+		 	console.log('s:'+s);
+		 	
 		});
-
-
 	</script>
 </html>

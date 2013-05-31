@@ -28,6 +28,14 @@ a {
 	background-image: url('../img/gm.gif');
 	/*display: none;*/
 }
+#boat{
+	width: 336px;
+	height: 160px;
+	top:7500.8px;
+	right:40%;
+	position: absolute;
+	background-image: url('../img/boat.png');
+}
 .startdoor{
 	z-index: 9;
 	position: absolute;

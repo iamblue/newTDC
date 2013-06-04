@@ -18,7 +18,6 @@
 		<div id="mountain"></div>
 		<div id="ufo"></div>
 	</body>
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	<script type="text/javascript">
 		var wWidth = $(window).width();
 		// console.log(wWidth);
@@ -37,7 +36,7 @@
 		 	//console.log(aaa);
 		 	// console.log((s/684.37)*1205.85 );
 		 	var t = .5*wWidth;
-		 	if(s<= 550){
+		 	if(s<= 678){
 		 		// $('#gm').css({
 		 		// 	top:200+((scrolled-50)*(684.37/430)),right:0+(scrolled-170)*(1205.85/430),
 		 		// 	'display':'block'
@@ -45,58 +44,58 @@
 				// $('.startdoor').css({'right':aaa})
 				$('.bg').css({
 					'right':t-((s/684.37)*1205.85),
-					'top':-150
+					'top':-300
 				})	
 				$('#gm').css({
 		 			'display':'block'
 		 		})
 		 		$('#boat').css({display:'none'})
 		 	}
-		 	if(s> 550 && s<=900){
+		 	if(s> 678 && s<=1184){
 		 		//console.log(st1+((s/451.46)*806.17))
 				$('.bg').css({
-					'right':(((s-350)/451.46)*806.17)-t,
-					'top':-150
+					'right':(((s-684.37)/451.46)*806.17)-t,
+					'top':-300
 				})
 				$('#gm').css({
 		 			'display':'block'
 		 		})
 		 		$('#boat').css({display:'none'})
 		 	}
-		 	if(s> 900 && s<=1080){
+		 	if(s> 1184 && s<=1380){
 		 		$('.bg').css({
-		 			'right':t-(((s-684.37-451.46+400)/230.5)*411.61),
-		 			'top':-150
+		 			'right':t-(((s-684.37-451.46+200)/230.5)*411.61),
+		 			'top':-300
 		 		})	
 		 		$('#gm').css({
 		 			'display':'block'
 		 		})
 		 		$('#boat').css({display:'none'})
 		 	}
-		 	if(s> 1080 && s<= 1210){
+		 	if(s> 1380 && s<= 1854){
 		 		$('.bg').css({
-		 			'right':((s-684.37-451.46+400)/129)*230.37-t,
-		 			'top':-150
+		 			'right':((s-684.37-451.46+200-230)/129)*230.37-t,
+		 			'top':-300
 		 		})	
 		 		$('#gm').css({
 		 			'display':'block'
 		 		})
 		 		$('#boat').css({display:'none'})
 		 	}
-		 	if(s> 1210 && s<= 1430){
+		 	if(s> 1584 && s<= 1881){
 		 		$('.bg').css({
-		 			'right':t-(((s-684.37-451.46+230)/313.66)*560.12),
-		 			'top':-150
+		 			'right':t-(((s-684.37-451.46+200-230-129)/313.66)*560.12),
+		 			'top':-300
 		 		})	
 		 		$('#gm').css({
 		 			'display':'block'
 		 		})
 		 		$('#boat').css({display:'none'})
 		 	}
-		 	if(s> 1430 && s<= 2044){
+		 	if(s> 1881 && s<= 2044){
 		 		$('.bg').css({
-		 			'right':((s-684.37-451.460-120)/159.92)*285.58-t,
-		 			'top':-150
+		 			'right':((s-684.37-451.46+200-230-129-313.66-200)/159.92)*285.58-t,
+		 			'top':-300
 		 		})	
 		 		$('#gm').css({
 		 			'display':'block'
@@ -106,7 +105,7 @@
 		 	if(s> 2044 && s<= 2553){
 		 		$('.bg').css({
 		 			'right':t-(((s-684.37-451.46+200-230-129-313.66-200-159.92+400)/540.4)*965),
-		 			'top':-150
+		 			'top':-300
 		 		})
 		 		$('#gm').css({
 		 			'display':'block'
@@ -116,7 +115,7 @@
 		 	if(s>2553 && s<= 3439){
 		 		$('.bg').css({
 		 			'right':((s-684.37-451.46+200-230-129-313.66-200-159.92+400-540.4-700)/917.33)*1638.1-t,
-		 			'top':-150
+		 			'top':-300
 		 		})	
 		 		$('#gm').css({
 		 			'display':'block'
@@ -126,7 +125,7 @@
 		 	if(s>3439 && s<= 3627){
 		 		$('.bg').css({
 		 			'right':t-(((s-684.37-451.46+200-230-129-313.66-200-159.92+400-540.4-700-917.33+400)/211.11)*376.98),
-		 			'top':-150
+		 			'top':-300
 		 		})	
 		 		$('#gm').css({
 		 			'display':'block'

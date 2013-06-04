@@ -9,25 +9,41 @@ a {
 body{
 	background: #8FC31F;
 }
-.bg{
+/*.bg{
 	width: 1921px;
-	height: 12752px;
-	right:48%;
-	background-image: url('../img/bg.jpg');
+	height: 11752px;
+	right:42%;
+	background-image: url('../img/road3.png');
 	position: absolute;
 	top:-300px;
-	/*	-moz-background-size:cover;
+	-moz-background-size:cover;
 	-webkit-background-size:cover;
-	-o-background-size:cover;*/
-	/*background-size:cover;*/
+	-o-background-size:cover;
+	background-size:cover;
+}*/
+.bg{
+	width: 1521px;
+	height: 8752px;
+	right:42%;
+	background-image: url('../img/road3.png');
+	position: absolute;
+	top:-300px;
+	-moz-background-size:cover;
+	-webkit-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
 }
 #gm{
-	width: 130px;
-	height: 175px;
-	top:43%;
+	width: 120px;
+	height: 120px;
+	top:45%;
 	right:48%;
 	position: fixed;
 	background-image: url('../img/gm.gif');
+	-moz-background-size:cover;
+	-webkit-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
 	/*display: none;*/
 }
 #boat{
@@ -81,4 +97,43 @@ body{
 	/*display: none;*/
 	background: url('../img/ufo.svg');
 	background-size: 100% 100%;
+}
+#bld1{
+	background: url('../img/bld1.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width:70%;
+  	height:300px;
+  	top:5855px;
+  	left: -400px;
+  	position: absolute;
+  	z-index: 101;
+}
+#bld2{
+	background: url('../img/bld2.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width:30%;
+  	height:200px;
+  	top:7401px;
+  	right:15%;
+  	position: absolute;
+  	z-index: 101;
+}
+#bld3{
+	background: url('../img/bld3.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width:30%;
+  	height:200px;
+  	top:7401px;
+  	right:-15%;
+  	position: absolute;
+  	z-index: 101;
 }

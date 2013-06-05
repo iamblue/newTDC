@@ -11,6 +11,13 @@
 		<div id="bld1"></div>
 		<div id="bld2"></div>
 		<div id="bld3"></div>
+		<div id="money1"></div>
+		<div id="money50"></div>
+		<div id="money10"></div>
+		<div id="money50_21"></div>
+		<div id="money50_22"></div>
+		<div id="money10_31"></div>
+		<div id="money10_32"></div>
 		<div class="bg">
 			<div id="gm"></div>
 			<div id="boat"></div>
@@ -50,12 +57,50 @@
 					'right':t-((s/684.37)*1205.85),
 					'top':-150
 				})	
+				/* - money 部分- */
+				$('#money1').css({
+					'right':t-((s/684.37)*1205.85)+650,
+				})
+				$('#money50').css({
+					'right':t-((s/684.37)*1205.85)+750,
+				})
+				$('#money10').css({
+					'right':t-((s/684.37)*1205.85)+680,
+				})
+				if(s<300){
+					$('#money1').css('display','block');
+				}
+				if(s>300 && s<=400){
+					$('#money1').css('display','none');
+				}
+				if(s<400){
+					$('#money50').css('display','block');
+				}
+				if(s>400 && s<=500){
+					$('#money50').css('display','none');
+				}
+				/* -- */
 				$('#gm').css({
 		 			'display':'block'
 		 		}).addClass('flipimg');
 		 		$('#boat').css({display:'none'})
 		 	}
 		 	if(s> 550 && s<=900){
+		 		/* - Money 部分 - */
+		 		$('#money1').css('display','none');
+		 		$('#money50').css('display','none');
+		 		/* -- */
+		 		/* -- */
+		 		if( s<650){
+		 			$('#money10').css('display','block');
+		 		}
+		 		if( s>650 && s<=750){
+		 			$('#money10').css('display','none');
+		 		}
+		 		$('#money10').css({
+					'right':(((s-350)/451.46)*806.17)-t+680,
+				})
+		 		/* -- */
 		 		//console.log(st1+((s/451.46)*806.17))
 				$('.bg').css({
 					'right':(((s-350)/451.46)*806.17)-t,
@@ -71,10 +116,17 @@
 		 			'right':t-(((s-684.37-451.46+400)/230.5)*411.61),
 		 			'top':-150
 		 		})	
+
 		 		$('#gm').css({
 		 			'display':'block'
 		 		}).addClass('flipimg');
 		 		$('#boat').css({display:'none'})
+		 		$('#money50_21').css({
+		 			'right':t-(((s-684.37-451.46+400)/230.5)*411.61)+600
+		 		})
+		 		$('#money50_22').css({
+		 			'right':t-(((s-684.37-451.46+400)/230.5)*411.61)+750
+		 		})
 		 	}
 		 	if(s> 1080 && s<= 1210){
 		 		$('.bg').css({
@@ -85,6 +137,13 @@
 		 			'display':'block'
 		 		}).removeClass('flipimg');
 		 		$('#boat').css({display:'none'})
+		 		/* -- */
+		 		$('#money50_21').css({
+		 			'right':((s-684.37-451.46+400)/129)*230.37-t+600
+		 		})
+		 		$('#money50_22').css({
+		 			'right':((s-684.37-451.46+400)/129)*230.37-t+750
+		 		})
 		 	}
 		 	if(s> 1210 && s<= 1430){
 		 		$('.bg').css({
@@ -95,8 +154,35 @@
 		 			'display':'block'
 		 		}).addClass('flipimg');
 		 		$('#boat').css({display:'none'})
+		 		/* -- */
+		 		$('#money50_21').css({
+		 			'right':t-((s-684.37-451.46+230)/313.66)*560.12+600
+		 		})
+		 		$('#money50_22').css({
+		 			'right':t-((s-684.37-451.46+230)/313.66)*560.12+750
+		 		})
+		 		if(s> 1250 && s<=1320){
+		 			$('#money50_21').css('display','none')
+		 		}
+		 		if(s<=1250){
+		 			$('#money50_21').css('display','block');
+		 		}
+		 		if(s> 1320 && s<=1400){
+		 			$('#money50_22').css('display','none')
+		 		}
+		 		if(s<=1320){
+		 			$('#money50_22').css('display','block');
+		 		}
+		 		$('#money10_31').css({
+		 			'right':t-((s-684.37-451.46+230)/313.66)*560.12+850,
+		 		})
+		 		/* -- */
 		 	}
 		 	if(s> 1430 && s<= 1573){
+		 		/* -- */
+		 		$('#money50_22').css('display','none')
+		 		$('#money50_21').css('display','none')
+		 		/* -- */
 		 		$('.bg').css({
 		 			'right':((s-684.37-451.460-100)/159.92)*285.58-t,
 		 			'top':-150
@@ -105,6 +191,9 @@
 		 			'display':'block'
 		 		}).removeClass('flipimg');
 		 		$('#boat').css({display:'none'})
+		 		$('#money10_31').css({
+		 			'right':((s-684.37-451.460-100)/159.92)*285.58-t+850,
+		 		})
 		 	}
 		 	if(s> 1573 && s<= 1960){
 		 		$('.bg').css({
@@ -115,8 +204,29 @@
 		 			'display':'block'
 		 		}).addClass('flipimg');
 		 		$('#boat').css({display:'none'})
+		 		/* -- */
+		 		$('#money10_31').css({
+		 			'right':t-(((s-684.37-451.46)/540.4)*965)+850,
+		 		})
+		 		if(s>1620 && s<= 1720){
+		 			$('#money10_31').css('display','none')
+		 		}
+		 		if(s<1620){
+		 			$('#money10_31').css('display','block')	
+		 		}
+		 		if(s>1720 && s<= 1820){
+		 			$('#money10_32').css('display','none')
+		 		}
+		 		if(s<1720){
+		 			$('#money10_32').css('display','block')			
+		 		}
+
+		 		/* -- */
+
 		 	}
 		 	if(s> 1960 && s <= 2645){
+		 		$('#money10_31').css('display','none');
+		 		$('#money10_32').css('display','none');	
 		 		$('.bg').css({
 		 			'right':((s-684.37-451.46-900)/917.33)*1638.1-t,
 		 			'top':-150

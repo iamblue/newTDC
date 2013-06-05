@@ -109,7 +109,7 @@ body{
   	background-size: cover;
   	width:70%;
   	height:300px;
-  	top:5855px;
+  	top:4659px;
   	left: -400px;
   	position: absolute;
   	z-index: 101;
@@ -122,7 +122,7 @@ body{
   	background-size: cover;
   	width:30%;
   	height:200px;
-  	top:7401px;
+  	top:5631px;
   	right:15%;
   	position: absolute;
   	z-index: 101;
@@ -135,8 +135,83 @@ body{
   	background-size: cover;
   	width:30%;
   	height:200px;
-  	top:7401px;
+  	top:5631px;
   	right:-15%;
   	position: absolute;
   	z-index: 101;
+}
+#money1{
+	background: url('../img/1.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 40px;
+  	height: 20px;
+  	position: absolute;
+  	top:800px;
+  	z-index: 10;
+}
+#money10{
+	background: url('../img/10.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 40px;
+  	height: 20px;
+  	position: absolute;
+  	top:1100px;
+  	z-index: 10;
+}
+#money50{
+	background: url('../img/50.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 40px;
+  	height: 20px;
+  	position: absolute;
+  	top:850px;
+  	z-index: 10;
+}
+#money50_21{
+	background: url('../img/50.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 40px;
+  	height: 20px;
+  	position: absolute;
+  	top:1650px;
+  	z-index: 10;	
+}
+#money50_22{
+	background: url('../img/50.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 40px;
+  	height: 20px;
+  	position: absolute;
+  	top:1750px;
+  	z-index: 10;	
+}
+#money10_31{
+	background: url('../img/10.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 40px;
+  	height: 20px;
+  	position: absolute;
+  	top:2050px;
+  	z-index: 10;
+}
+#money10_32{
+
 }

@@ -8,6 +8,9 @@ a {
 }
 body{
 	background: #8FC31F;
+	height:13000px;
+	overflow-x: hidden;
+	width: 100%;
 }
 /*.bg{
 	width: 1921px;
@@ -23,9 +26,9 @@ body{
 }*/
 .bg{
 	width: 1521px;
-	height: 8752px;
+	height: 8852px;
 	right:42%;
-	background-image: url('../img/road3.png');
+	background-image: url('../img/road4.png');
 	position: absolute;
 	top:-300px;
 	-moz-background-size:cover;
@@ -34,12 +37,12 @@ body{
 	background-size:cover;
 }
 #gm{
-	width: 120px;
+	width: 90px;
 	height: 120px;
-	top:45%;
-	right:48%;
+	top:46%;
+	right:52%;
 	position: fixed;
-	background-image: url('../img/gm.gif');
+	background-image: url('../img/gm1.gif');
 	-moz-background-size:cover;
 	-webkit-background-size:cover;
 	-o-background-size:cover;
@@ -50,7 +53,7 @@ body{
 	width: 336px;
 	height: 160px;
 	top:7500.8px;
-	right:40%;
+	right:30%;
 	position: absolute;
 	background-image: url('../img/boat.png');
 }

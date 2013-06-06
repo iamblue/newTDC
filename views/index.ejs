@@ -8,6 +8,7 @@
 	</head>
 	<body>
 		<div class="startdoor animated fadeInUp"></div>
+		<div id="click1"></div>
 		<div id="bld1"></div>
 		<div id="bld2"></div>
 		<div id="bld3"></div>
@@ -36,6 +37,16 @@
 		// $('#gm').css({
 		// 		'top':200,'right':0,
 		//  	})
+		$(function(){
+			// 幫 a.abgne_gotoheader 加上 click 事件
+			$('#click1').click(function(){
+				var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+				$body.animate({
+					scrollTop: 1530
+				}, 1000);
+				return false;
+			});
+		});
 		$(window).bind('scroll',function(e){
 		 	//console.log(e)
 		 	var s = $(window).scrollTop();

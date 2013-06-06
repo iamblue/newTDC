@@ -9,6 +9,9 @@
 	<body>
 		<div class="startdoor animated fadeInUp"></div>
 		<div id="click1"></div>
+		<div id="click2"></div>
+		<div id="click3"></div>
+		<div id="click4"></div>
 		<div id="bld1"></div>
 		<div id="bld2"></div>
 		<div id="bld3"></div>
@@ -60,6 +63,27 @@
 				var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
 				$body.animate({
 					scrollTop: 1530
+				}, 1000);
+				return false;
+			});
+			$('#click2').click(function(){
+				var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+				$body.animate({
+					scrollTop: 2320
+				}, 1000);
+				return false;
+			});
+			$('#click3').click(function(){
+				var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+				$body.animate({
+					scrollTop: 4049
+				}, 1000);
+				return false;
+			});
+			$('#click4').click(function(){
+				var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+				$body.animate({
+					scrollTop: 4721
 				}, 1000);
 				return false;
 			});

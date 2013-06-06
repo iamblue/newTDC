@@ -7,51 +7,52 @@
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	</head>
 	<body>
-		<div class="startdoor animated fadeInUp"></div>
-		<div id="click1"></div>
-		<div id="click2"></div>
-		<div id="click3"></div>
-		<div id="click4"></div>
-		<div id="click5"></div>
-		<!-- <div id="bld1"></div>
-		<div id="bld2"></div>
-		<div id="bld3"></div> -->
-		<!-- psn -->
-		div
-
-		<div id="money1"></div>
-		<div id="money50"></div>
-		<div id="money10"></div>
-		<div id="money50_21"></div>
-		<div id="money50_22"></div>
-		<div id="money10_31"></div>
-		<div id="money10_32"></div>
-		<div id="money1_41"></div>
-		<div id="money10_42"></div>
-		<div id="money50_43"></div>
-		<div id="money50_44"></div>
-		<div id="money50_45"></div>
-		<div id="block0"></div>
-		<div id="block1"></div>
-		<!-- <div id="bld1_1"></div>
-		<div id="bld2_link"></div>
-		<div id="bld1_5"></div>
-		<div id="bld_3"></div>
-		<div id="bld_4"></div> -->
-		<div id="title3"></div>
-		<div id="title1"></div>
-		<div id="fishpool"></div>
-		<div id="daikon_ground"></div>
-		<div id="title2"></div>
-		<div id="dog"></div>
-		<div class="bg">
-			<div id="gm"></div>
-			<div id="boat"></div>
+		<div id="bodyFr">
+			<div class="startdoor animated fadeInUp"></div>
+			<div id="click1"></div>
+			<div id="click2"></div>
+			<div id="click3"></div>
+			<div id="click4"></div>
+			<div id="click5"></div>
+			<!-- <div id="bld1"></div>
+			<div id="bld2"></div>
+			<div id="bld3"></div> -->
+			<!-- psn -->
+			<div id="money1"></div>
+			<div id="money50"></div>
+			<div id="money10"></div>
+			<div id="money50_21"></div>
+			<div id="money50_22"></div>
+			<div id="money10_31"></div>
+			<div id="money10_32"></div>
+			<div id="money1_41"></div>
+			<div id="money10_42"></div>
+			<div id="money50_43"></div>
+			<div id="money50_44"></div>
+			<div id="money50_45"></div>
+			<div id="block0"></div>
+			<div id="block1"></div>
+			<!-- <div id="bld1_1"></div>
+			<div id="bld2_link"></div>
+			<div id="bld1_5"></div>
+			<div id="bld_3"></div>
+			<div id="bld_4"></div> -->
+			<div id="title3"></div>
+			<div id="title1"></div>
+			<div id="fishpool"></div>
+			<div id="daikon_ground"></div>
+			<div id="title2"></div>
+			<div id="dog"></div>
+			<div id="train"></div>
+			<div id="superman"></div>
+			<div class="bg">
+				<div id="gm"></div>
+				<div id="boat"></div>
+			</div>
+			<!-- <div id="mountain"></div> -->
+			<div id="ufo"></div>
+			<div id="mt"></div>
 		</div>
-
-		<!-- <div id="mountain"></div> -->
-		<div id="ufo"></div>
-		<div id="mt"></div>
 	</body>
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	<script type="text/javascript">
@@ -60,6 +61,15 @@
 		var returnpoint = 0;
 		var returnpoint2 = 0;
 		var returnpoint3 = 0;
+		var ps1 = 0;
+		var ps2 = 0;
+		var ps3 = 0;
+		var ps4 = 0;
+		var ps5 = 0;
+		var ps6 = 0;
+		var ps7 = 0;
+		var ps8 = 0;
+		var ps9 = 0;
 		$(function(){
 			// $('#gm').addClass('animated lightSpeedIn')
 			$('#click1').click(function(){
@@ -233,6 +243,7 @@
 		 		})
 		 	}
 		 	if(s> 1210 && s<= 1430){
+
 		 		$('#block1').css({
 					'right':t-((s-684.37-451.46+230)/313.66)*560.12+520
 				})
@@ -276,6 +287,10 @@
 		 		$('#block1').css({
 					'right':((s-684.37-451.460-100)/159.92)*285.58-t+520
 				})
+				$('#train').css({
+		 			right:-790+20*(s-1430),
+		 			'display':'block'
+		 		})
 		 		/* -- */
 		 		$('#money50_22').css('display','none')
 		 		$('#money50_21').css('display','none')
@@ -296,6 +311,7 @@
 		 		})
 		 	}
 		 	if(s> 1573 && s<= 1960){
+		 		
 		 		$('.bg').css({
 		 			'right':t-(((s-684.37-451.46)/540.4)*965),
 		 			'top':-150
@@ -336,6 +352,9 @@
 		 		$('#title2').removeClass('animated flip');
 		 	}
 		 	if(s> 1960 && s <= 2645){
+		 		$('#train').css({
+		 			'display':'none'
+		 		})
 		 		$('#money10_31').css('display','none');
 		 		$('#money10_32').css('display','none');	
 		 		$('.bg').css({
@@ -537,29 +556,51 @@
 		 			'display':'block'
 		 		}).removeClass('flipimg');
 		 		$('#boat').css({display:'none'})
+		 		$('#title3').css({
+		 			'right':(((s-684.37-451.46-2200)/512.85)*915.81)-680-t+500
+		 		});
+
 		 	}
+
 		 	if(s>4020 && s<= 4235){
+		 		
 		 		$('.bg').css({
-		 			'right':t-(((s-684.37-451.46-3000)/174.89)*312.31)-680,
+		 			'right':t-(((s-684.37-451.46-3000)/174.89)*312.31)-850,
 		 			'top': tt+430
 		 		})	
-		 		// $('title3')
+		 		$('#title3').css({
+		 			'right':t-(((s-684.37-451.46-3000)/174.89)*312.31)-850+500
+		 		})
+
 		 		$('#gm').css({
 		 			'display':'block'
 		 		}).addClass('flipimg');
 		 		$('#boat').css({display:'none'})
+		 		
 		 	}
 		 	if(s>4235 && s<= 4566){
 		 		$('.bg').css({
 		 			'right':(((s-684.37-451.46-2500)/452.17)*808.47)-680-t,
 		 			'top': tt+430
 		 		})	
+		 		$('#title3').css({ 
+		 			'right':(((s-684.37-451.46-2500)/452.17)*808.47)-680-t+500
+		 		})
 		 		$('#gm').css({
 		 			'display':'block'
 		 		}).removeClass('flipimg');
 		 		$('#boat').css({display:'none'})
+
 		 	}
 		 	if(s>4566 && s<= 5209){
+		 		$('#superman').css({
+		 			'right':-150+5*(s-4566)
+		 		})
+		 		if(s>4700 && s<4800){
+		 			$('#superman').addClass('animated rotateIn');
+		 		}else{
+		 			$('#superman').removeClass('animated rotateIn')
+		 		}
 		 		$('.bg').css({
 		 			'right':t-(((s-684.37-451.46-3600)/814.82)*1255.04)-680	,
 		 			'top': tt+430

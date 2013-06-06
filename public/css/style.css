@@ -213,6 +213,40 @@ body{
   	z-index: 10;
 }
 #money10_32{
+	background: url('../img/10.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 40px;
+  	height: 20px;
+  	position: absolute;
+  	top:2270px;
+  	z-index: 10;
+}
+#money1_41{
+	background: url('../img/1.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 40px;
+  	height: 20px;
+  	position: absolute;
+  	top:2500px;
+  	z-index: 10;
+}
+#money10_42{
+	background: url('../img/10.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 40px;
+  	height: 20px;
+  	position: absolute;
+  	top:2700px;
+  	z-index: 10;
 
 }
 #click1{
@@ -222,4 +256,163 @@ body{
 	z-index: 999;
 	position: fixed;
 	cursor: pointer;
+}
+#money50_43{
+	background: url('../img/50.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 40px;
+  	height: 20px;
+  	position: absolute;
+  	top:2900px;
+  	z-index: 10;
+}
+#money50_44{
+	background: url('../img/50.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 40px;
+  	height: 20px;
+  	position: absolute;
+  	top:2950px;
+  	z-index: 10;
+}
+#money50_45{
+	background: url('../img/50.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 40px;
+  	height: 20px;
+  	position: absolute;
+  	top:3000px;
+  	z-index: 10;
+}
+#block0{
+	background: url('../img/yellowBD.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 340px;
+  	height: 200px;
+  	position: absolute;
+  	top:550px;
+}
+#block1{
+	background: url('../img/blueBD.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 340px;
+  	height: 200px;
+  	position: absolute;
+  	top:1200px;
+}
+#bld1_1{
+	background: url('../img/bld1_1.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 100px;
+  	height: 140px;
+  	position: absolute;
+  	top:1200px;
+}
+#bld2_link{
+	background: url('../img/bld2_link.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 180px;
+  	height: 160px;
+  	position: absolute;
+  	top:1200px;
+}
+#bld1_5{
+	background: url('../img/bld1_5.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 200px;
+  	height: 360px;
+  	position: absolute;
+  	top:800px;	
+}
+#bld_4{
+	background: url('../img/bld_4.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 140px;
+  	height: 160px;
+  	position: absolute;
+  	top:1000px;	
+}
+#bld_3{
+	background: url('../img/bld_3.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 140px;
+  	height: 160px;
+  	position: absolute;
+  	top:1000px;	
+}
+#fishpool{
+	background: url('../img/fishpool.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 290px;
+  	height: 170px;
+  	position: absolute;
+  	top:2500px;	
+}
+#daikon_ground{
+	background: url('../img/daikon_ground.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 300px;
+  	height: 180px;
+  	position: absolute;
+  	top:2600px;	
+}
+#title2{
+	background: url('../img/title2.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 280px;
+  	height: 230px;
+  	position: absolute;
+  	z-index: 99;
+  	top:2600px;
+}
+#dog{
+	background: url('../img/dog.svg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 290px;
+  	height: 170px;
+  	position: absolute;
+  	top:2800px;	
+
 }

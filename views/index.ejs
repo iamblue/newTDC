@@ -12,9 +12,13 @@
 		<div id="click2"></div>
 		<div id="click3"></div>
 		<div id="click4"></div>
+		<div id="click5"></div>
 		<div id="bld1"></div>
 		<div id="bld2"></div>
 		<div id="bld3"></div>
+		<!-- psn -->
+		div
+
 		<div id="money1"></div>
 		<div id="money50"></div>
 		<div id="money10"></div>
@@ -49,16 +53,12 @@
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	<script type="text/javascript">
 		var wWidth = $(window).width();
-		// console.log(wWidth);
 		var af_ed = 0;
 		var returnpoint = 0;
 		var returnpoint2 = 0;
 		var returnpoint3 = 0;
-		// $('#gm').css({
-		// 		'top':200,'right':0,
-		//  	})
 		$(function(){
-			// 幫 a.abgne_gotoheader 加上 click 事件
+			// $('#gm').addClass('animated lightSpeedIn')
 			$('#click1').click(function(){
 				var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
 				$body.animate({
@@ -85,6 +85,13 @@
 				$body.animate({
 					scrollTop: 4721
 				}, 1000);
+				return false;
+			});
+			$('#click5').click(function(){
+				var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+				$body.animate({
+					scrollTop: 12304
+				}, 3000);
 				return false;
 			});
 		});
@@ -124,8 +131,10 @@
 				})
 				if(s<300){
 					$('#money1').css('display','block');
+					
 				}
 				if(s>300 && s<=400){
+
 					$('#money1').css('display','none');
 				}
 				if(s<400){
@@ -133,6 +142,7 @@
 				}
 				if(s>400 && s<=500){
 					$('#money50').css('display','none');
+					
 				}
 				/* -- */
 				$('#gm').css({
@@ -320,6 +330,7 @@
 		 		$('#dog').css({
 		 			'right':t-(((s-684.37-451.46)/540.4)*965)+700,	
 		 		})
+		 		$('#title2').removeClass('animated flip');
 		 	}
 		 	if(s> 1960 && s <= 2645){
 		 		$('#money10_31').css('display','none');
@@ -328,6 +339,7 @@
 		 			'right':((s-684.37-451.46-900)/917.33)*1638.1-t,
 		 			'top':-150
 		 		})	
+		 		$('#title2').addClass('animated flip');
 		 		$('#gm').css({
 		 			'display':'block'
 		 		}).removeClass('flipimg');
@@ -392,6 +404,7 @@
 		 		}
 		 	}
 		 	if(s>2645 && s<= 2865){
+		 		$('#title2').removeClass('animated flip');
 				$('#money1_41').css('display','none')
 		 		$('#money10_42').css('display','none')
 		 		$('#fishpool').css({

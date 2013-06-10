@@ -159,7 +159,7 @@ body{
 	z-index: 20;
 	background-image: url('../img/mountain.png');
 }
-#gm{
+/*#gm{
 	width: 90px;
 	height: 120px;
 	top:46%;
@@ -170,7 +170,26 @@ body{
 	-webkit-background-size:cover;
 	-o-background-size:cover;
 	background-size:cover;
-	/*display: none;*/
+}*/
+.gm{
+	height:120px;
+	z-index: 999;
+	top:0;
+ 	background:url("../img/greenman.png");
+  	-webkit-animation: gm .5s steps(7) infinite;
+}
+@keyframes gm{
+  0%{background-position:0px;}
+  100%{background-position:-652px;}
+}
+.run{height:195px;
+  background:url("http://i50.tinypic.com/2j26dee.png");
+  -webkit-animation:run .5s steps(8) infinite;
+}
+@keyframes run{
+  0%{background-position:0px;}
+  100%{background-position:-960px;}
+
 }
 #boat{
 	width: 336px;

@@ -178,7 +178,7 @@ body{
  	background:url("../img/greenman.png");
   	-webkit-animation: gm .5s steps(7) infinite;
 }
-@keyframes gm{
+@-webkit-keyframes gm{
   0%{background-position:0px;}
   100%{background-position:-652px;}
 }
@@ -186,7 +186,7 @@ body{
   background:url("http://i50.tinypic.com/2j26dee.png");
   -webkit-animation:run .5s steps(8) infinite;
 }
-@keyframes run{
+@-webkit-keyframes run{
   0%{background-position:0px;}
   100%{background-position:-960px;}
 

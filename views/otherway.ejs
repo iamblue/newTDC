@@ -4,7 +4,6 @@
 		<title>台北設計之都</title>
 		<link rel='stylesheet' href='/css/styleChange.css' />
 		<link rel='stylesheet' href='/css/animate.css' />
-		<script type="text/javascript" src="/js/jquery.scrollpath.js"></script>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	</head>
 	<body>
@@ -17,7 +16,10 @@
 	<script type="text/javascript">
 		var wWidth = $(window).width();
 		$(function(){
+			$('.bg').scrollTop();
 		});
+		var hHeight = $(window).height();
+		var t,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t16 = 0;
 		$(window).bind('scroll',function(e){
 		 	//console.log(e)
 		 	var s = $(window).scrollTop();
@@ -70,19 +72,85 @@
 				})
 				t7 = t6-((s-684.37-451.46-600)/917.33)*1638.1;
 			}
-			if(s>2306 && s<=2462){
+			if(s>2326 && s<=2462){
+
 				$('#gm').css({
-					'right':t7+(((s-684.37-451.46-300)/211.11)*376.98)-1600
+					'right':t7+(((s-2306)/211.11)*376.98),
+					top:.3*hHeight+(s-2306)
 				})
-				t8 = t7+(((s-684.37-451.46-300)/211.11)*376.98)-1600; 
+				h1 = .3*hHeight+(s-2306)
+				t8 = t7+(((s-2306)/211.11)*376.98) 
 			}
-			if(s>2462){
-				$('#gm').css({
-					'right':t8+(((s-684.37-451.46-1500)/211.11)*376.98),
-					'top':-300+2*(s-2462)
+			if(s<=2326){
+				$('.bg').css({
+					'position':'absolute',
+					'top':'-300px'
 				})
+			}
+			if(s>2306){
+				$('.bg').css({
+					'position':'fixed',
+					'top':'-2600px'
+				})
+			}
+			if(s>2832){
+				$('.bg').css({
+					'position':'absolute',
+					'top':'200px'
+				})
+			}
+			if(s>2462 && s<=2688){
+				$('#gm').css({
+					'right':t8+(((s-2462)/240.97)*430.3),
+					'top':h1-(s-2462)
+				})
+				t9 = t8+(((s-2462)/240.97)*430.3);
+				h2 = h1-(s-2462);
+			}
+			if(s>2688 && s<=2832){
+				$('#gm').css({
+					'right':t9+(((s-2688)/205.45)*368.66),
+					'top':h2+(s-2688)
+				})	
+				h3 = h2+(s-2688);
+				t10 = t9+(((s-2688)/205.45)*368.66);
+			}
+			if(s>2832 && s<=2970){
+				$('#gm').css({
+					'right':t10-(((s-2832)/271.38)*484.6),
+					'top':h3
+				})	
+				t11 = t10-(((s-2832)/271.38)*484.6)
+			}
+			if(s>2970 && s<= 3186){
+				$('#gm').css({
+					'right':t11+(((s-3027)/512.85)*915.81)+50,
+					'top':h3
+				})	
+				t12 = t11+(((s-3027)/512.85)*915.81)+50;
+			}
+			if(s>3186 && s<= 3521){
+				$('#gm').css({
+					'right':t12-(((s-3027)/174.89)*312.31)+200,
+					'top':h3
+				});	
+				t13 = t12-(((s-3027)/174.89)*312.31)+200;
+			}
+			if(s>3521 && s<=3650){
+				$('#gm').css({
+					'right':t13+(((s-3521)/452.17)*808.47),
+					'top':h3
+				})	
+				t14 = t13+(((s-3521)/452.17)*808.47)
+			}
+			if(s>3650){
+				$('#gm').css({
+					'right':t14-(((s-3521)/814.82)*1255.04)+200,
+					'top':h3
+				})	
 			}
 
 		});
+
 	</script>
 </html>

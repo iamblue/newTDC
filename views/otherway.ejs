@@ -12,7 +12,7 @@
 			<div id="gm"></div>
 		</div>
 	</body>
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<script>//document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	<script type="text/javascript">
 		var wWidth = $(window).width();
 		$(function(){
@@ -23,7 +23,6 @@
 		$(window).bind('scroll',function(e){
 		 	//console.log(e)
 		 	var s = $(window).scrollTop();
-		 	console.log(s);
 			if(s<=440){
 				$('#gm').css({
 					'right':((s/684.37)*1205.85)	

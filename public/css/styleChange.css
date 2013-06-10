@@ -44,3 +44,14 @@ body{
 	background-size:cover;
 	/*display: none;*/
 }
+#gm{
+	width: 90px;
+	height:120px;
+  	background:url("../img/greenman.png");
+  	-webkit-animation: run .5s steps(7) infinite;
+}
+@-webkit-keyframes run{
+  0%{background-position:0px;}
+  100%{background-position:651px;}
+
+}

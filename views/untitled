@@ -1,0 +1,40 @@
+Build new DB table
+1.Table Name:votemember
+	a.Attr name:
+		1)id (int/auto/非空)
+		2)p_uid (vachar(256)/非空)
+		3)member_uid (vachar(256)/非空)
+		4)name (text/非空)
+		5)phone (int/非空)
+		6)address (text/非空)
+		7)update (datetime/非空)
+		8)since (datetime/非空)
+2.Table Name:ideas_category
+	a.Attr name:
+		1)id (int/auto/非空)
+		2)category_en (text/非空)
+		3)category_zh (text/非空)
+		4)update (datetime/非空)
+		5)since (datetime/非空)
+	Hint: 
+	Currently, we had there category: 1.life 2.3C 3.other.
+	The "News" category don't add in DB table,We'll fectch the latest datas from the current time.
+3.Edit Table: Project
+	a.Add new attr name: 
+		1.ideas_puid (vachar/可為空)
+		2.voteprice (int/可為空)
+Backend interface:
+1.(Manage/add category)
+	url:/managecategory
+	i.Manage Tags
+	ii.ADD Tags
+		1.Category manage (分類管理)
+			a.add new Category (新增分類)
+			b.Added time （商品上架時間）
+			c.下架時間 
+2.(Edit "新增商品")
+	url:http://www.limitstyle.com/almighty/project/create
+	i."專案名稱" -> 改成 兩種方式
+		a.直接輸入
+		b.下拉式選單抓ideas
+	ii.新增優惠價欄位

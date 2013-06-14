@@ -1,0 +1,57 @@
+body {
+	margin: 0;
+	padding: 0
+}
+
+a {
+  color: #00B7FF;
+}
+html{
+	overflow-x: hidden;
+}
+body{
+	background: #8FC31F;
+	height:8552px;
+	width: 100%;
+}
+#bodyFr{
+	width: 1280px;
+	height: 8552px;
+	overflow-x: hidden;
+}
+.bg{
+	width: 1280px;
+	height: 8852px;
+	right:0;
+	background-image: url('../img/road7.png');
+	position: absolute;
+	top:-300px;
+	-moz-background-size:cover;
+	-webkit-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+#gm{
+	width: 50px;
+	height: 80px;
+	top:30%;
+	right:0;
+	position: fixed;
+	background-image: url('../img/3Dgreen.gif');
+	-moz-background-size:cover;
+	-webkit-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	/*display: none;*/
+}
+#gm{
+	width: 90px;
+	height:120px;
+  	background:url("../img/greenman.png");
+  	-webkit-animation: run .5s steps(7) infinite;
+}
+@-webkit-keyframes run{
+  0%{background-position:0px;}
+  100%{background-position:651px;}
+
+}

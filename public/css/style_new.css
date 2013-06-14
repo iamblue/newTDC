@@ -11,14 +11,34 @@ html{
 }
 body{
 }
+#stage1{
+	width: 100%;
+	height: 3000px;
+	overflow-x:hidden;
+}
 #gm{
 	width: 90px;
 	height:120px;
   	background:url("../img/greenman.png");
   	-webkit-animation: run .5s steps(7) infinite;
+  	bottom: 50px;
+  	position: fixed;
 }
 @-webkit-keyframes run{
   0%{background-position:0px;}
   100%{background-position:651px;}
-
+}
+#gd{
+	width: 100%;
+	background: #8fc31f;
+	bottom: 0;
+	position: fixed;
+	height: 50px;
+}
+#pinkcar{
+	bottom: 50px;
+	position: fixed;
+	width: 136px;
+	height: 55px;
+	background: url("../img/pink_car.png");
 }

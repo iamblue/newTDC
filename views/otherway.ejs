@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>台北設計之都</title>
+		<link rel='stylesheet' href='/css/styleChange.css' />
+		<link rel='stylesheet' href='/css/animate.css' />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="bodyFr">
+			<div class="bg"></div>
+			<div id="gm"></div>
+		</div>
+	</body>
+	<script>//document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<script type="text/javascript">
+		var wWidth = $(window).width();
+		$(function(){
+			$('.bg').scrollTop();
+		});
+		var hHeight = $(window).height();
+		var t,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t16 = 0;
+		$(window).bind('scroll',function(e){
+		 	//console.log(e)
+		 	var s = $(window).scrollTop();
+			if(s<=440){
+				$('#gm').css({
+					'right':((s/684.37)*1205.85)	
+				})	
+				t =((s/684.37)*1205.85);
+			}
+			if(s>440 && s<=756){
+				$('#gm').css({
+					'right':t-(((s-450)/451.46)*806.17)
+				})	
+				t1 = t-(((s-450)/451.46)*806.17);
+			}
+			if(s>756 && s<= 878){
+				$('#gm').css({
+					'right':t1+(((s-684.37-451.46+400)/230.5)*411.61)
+				})	
+				t2 = t1+(((s-684.37-451.46+400)/230.5)*411.61)
+			}
+			if(s>878 && s<=972){
+				$('#gm').css({
+					'right':t2-((s-684.37-451.46+250)/129)*230.37
+				})
+				t3 = t2-((s-684.37-451.46+250)/129)*230.37;
+			}
+			if(s>972 && s<= 1196){
+				$('#gm').css({
+					'right':t3+(((s-684.37-451.46+170)/313.66)*560.12)
+				})
+				t4 = t3+(((s-684.37-451.46+170)/313.66)*560.12)	
+			}
+			if(s>1196 && s<= 1319){
+				$('#gm').css({
+					'right':t4-((s-684.37-451.460-70)/159.92)*285.58
+				})
+				t5 = t4-((s-684.37-451.460-70)/159.92)*285.58
+			}
+			if(s>1319 && s<= 1694){
+				$('#gm').css({
+					'right':t5+(((s-684.37-451.46-200)/540.4)*965)
+				})	
+				t6 = t5+(((s-684.37-451.46-200)/540.4)*965);
+			}
+			if(s>1694 && s<=2306){
+				$('#gm').css({
+					'right':t6-((s-684.37-451.46-600)/917.33)*1638.1
+				})
+				t7 = t6-((s-684.37-451.46-600)/917.33)*1638.1;
+			}
+			if(s>2326 && s<=2462){
+
+				$('#gm').css({
+					'right':t7+(((s-2306)/211.11)*376.98),
+					top:.3*hHeight+(s-2306)
+				})
+				h1 = .3*hHeight+(s-2306)
+				t8 = t7+(((s-2306)/211.11)*376.98) 
+			}
+			if(s<=2326){
+				$('.bg').css({
+					'position':'absolute',
+					'top':'-300px'
+				})
+			}
+			if(s>2306){
+				$('.bg').css({
+					'position':'fixed',
+					'top':'-2600px'
+				})
+			}
+			if(s>2832){
+				$('.bg').css({
+					'position':'absolute',
+					'top':'200px'
+				})
+			}
+			if(s>2462 && s<=2688){
+				$('#gm').css({
+					'right':t8+(((s-2462)/240.97)*430.3),
+					'top':h1-(s-2462)
+				})
+				t9 = t8+(((s-2462)/240.97)*430.3);
+				h2 = h1-(s-2462);
+			}
+			if(s>2688 && s<=2832){
+				$('#gm').css({
+					'right':t9+(((s-2688)/205.45)*368.66),
+					'top':h2+(s-2688)
+				})	
+				h3 = h2+(s-2688);
+				t10 = t9+(((s-2688)/205.45)*368.66);
+			}
+			if(s>2832 && s<=2970){
+				$('#gm').css({
+					'right':t10-(((s-2832)/271.38)*484.6),
+					'top':h3
+				})	
+				t11 = t10-(((s-2832)/271.38)*484.6)
+			}
+			if(s>2970 && s<= 3186){
+				$('#gm').css({
+					'right':t11+(((s-3027)/512.85)*915.81)+50,
+					'top':h3
+				})	
+				t12 = t11+(((s-3027)/512.85)*915.81)+50;
+			}
+			if(s>3186 && s<= 3521){
+				$('#gm').css({
+					'right':t12-(((s-3027)/174.89)*312.31)+200,
+					'top':h3
+				});	
+				t13 = t12-(((s-3027)/174.89)*312.31)+200;
+			}
+			if(s>3521 && s<=3650){
+				$('#gm').css({
+					'right':t13+(((s-3521)/452.17)*808.47),
+					'top':h3
+				})	
+				t14 = t13+(((s-3521)/452.17)*808.47)
+			}
+			if(s>3650){
+				$('#gm').css({
+					'right':t14-(((s-3521)/814.82)*1255.04)+200,
+					'top':h3
+				})	
+			}
+
+		});
+
+	</script>
+</html>

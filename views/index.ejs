@@ -11,28 +11,77 @@
 			<div id="gm" data-arrived=""></div>
 			<div id="gd"></div>
 			<div id="pinkcar"></div>
+			<div id="bluecar"></div>
+			<div id="st1"></div>
+			<div id="st2"></div>
+			<div id="st3"></div>
 		</div>
 		<script type="text/javascript">
-		var wWidth = $(window).width();
+		var wWidth = $(window).width();//計算視窗大小
 		var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
-		var checkArr;
+		var leftsp = (wWidth - 90)/2; //計算人物跟最右邊的框框距離
 		$body.animate({
 				scrollTop: 0
 			},2000);
 		$(window).bind('scroll',function(e){
 			var s = $(window).scrollTop();
-			//console.log(s)
-			if (s>100 && s<=300){
-				$('#gm').animate({
-			    left: 300,
-				},2000);
+			console.log(s);
+			if (s>=50 && s<300){
+				console.log('yoyo')
 				$body.animate({
-					scrollTop: 400
+					scrollTop: 300
 				}, 2000);
+				$('#gm').animate({
+			    	left: leftsp,
+				},2000);
+				$('#pinkcar').animate({
+			    	right: wWidth,
+				},2500,function(){
+					dn();
+				});
+				if(s>140){
+					$('#st1').animate({
+			    		right: wWidth,
+					},5000);
+				}
+				if(s>180){
+					$('#bluecar').animate({
+			    		right: wWidth,
+					},3000,function(){
+						dn();
+					});
+				}
+				return false;
 			}
-			
-			//console.log(checkArr)
+			if( s>400 && s<600){
+				$body.animate({
+					scrollTop: 600
+				}, 2000);
+				$('#st2').animate({
+			    		right: wWidth,
+					},5000);
+				return false;
+				
+			}
+			if(s>=700 && s<=1000){
+				$body.animate({
+					scrollTop: 1000
+				}, 2000);
+
+				$('#st3').animate({
+			    		right: wWidth,
+					},5000);
+				return false;
+			}
 		})
+		function passst1(){
+			$('#st1').addClass('animated flip').animate({
+			    			right: wWidth,
+						},2500)
+		}
+		function dn(){
+			$(this).css('display','none');
+		}
 		</script>
 	</body>
 </html>

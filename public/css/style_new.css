@@ -7,7 +7,7 @@ a {
   color: #00B7FF;
 }
 html{
-	overflow-x: hidden;
+	
 }
 body{
 }
@@ -23,6 +23,7 @@ body{
   	-webkit-animation: run .5s steps(7) infinite;
   	bottom: 50px;
   	position: fixed;
+  	z-index: 10;
 }
 @-webkit-keyframes run{
   0%{background-position:0px;}
@@ -34,6 +35,7 @@ body{
 	bottom: 0;
 	position: fixed;
 	height: 50px;
+	z-index: 5;
 }
 #pinkcar{
 	bottom: 50px;
@@ -41,4 +43,37 @@ body{
 	width: 136px;
 	height: 55px;
 	background: url("../img/pink_car.png");
+	right:-136px;
+}
+#bluecar{
+	bottom: 50px;
+	position: fixed;
+	width: 136px;
+	height: 55px;
+	background: url("../img/bluecar.png");
+	right:-136px;
+}
+#st1{
+	width: 80px;
+	height: 90px;
+	bottom: 30px;
+	right: -90px;
+	position: fixed;
+	background: url("../img/st1.png");
+}
+#st2{
+	width: 80px;
+	height: 90px;
+	bottom: 30px;
+	right: -90px;
+	position: fixed;
+	background: url("../img/st2.png");
+}
+#st3{
+	width: 80px;
+	height: 90px;
+	bottom: 30px;
+	right: -90px;
+	position: fixed;
+	background: url("../img/st3.png");
 }

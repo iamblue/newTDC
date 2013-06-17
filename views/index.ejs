@@ -16,72 +16,100 @@
 			<div id="st2"></div>
 			<div id="st3"></div>
 		</div>
+		<div id="stage2">
+		</div>
 		<script type="text/javascript">
 		var wWidth = $(window).width();//計算視窗大小
+		var hHeight = $(window).height();//計算視窗大小
 		var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
 		var leftsp = (wWidth - 90)/2; //計算人物跟最右邊的框框距離
-		$body.animate({
+		$('#stage1').animate({
 				scrollTop: 0
 			},2000);
+		$('#gd').animate({
+			    	bottom: 0,
+				},500,function(){
+					$('#gm').animate({
+			    		left: leftsp,
+					},1500);
+				});
+		var landdown = 0;
+		$body.animate({
+			scrollTop: 0
+		});
 		$(window).bind('scroll',function(e){
 			var s = $(window).scrollTop();
 			console.log(s);
-			if (s>=50 && s<300){
-				console.log('yoyo')
-				$body.animate({
-					scrollTop: 300
-				}, 2000);
-				$('#gm').animate({
-			    	left: leftsp,
-				},2000);
-				$('#pinkcar').animate({
-			    	right: wWidth,
-				},2500,function(){
-					dn();
+				$('#pinkcar').css({
+			    	right:-200+2*s
 				});
-				if(s>140){
-					$('#st1').animate({
-			    		right: wWidth,
-					},5000);
-				}
-				if(s>180){
-					$('#bluecar').animate({
-			    		right: wWidth,
-					},3000,function(){
-						dn();
-					});
-				}
-				return false;
-			}
-			if( s>400 && s<600){
-				$body.animate({
-					scrollTop: 600
-				}, 2000);
-				$('#st2').animate({
-			    		right: wWidth,
-					},5000);
-				return false;
-				
-			}
-			if(s>=700 && s<=1000){
-				$body.animate({
-					scrollTop: 1000
-				}, 2000);
+				$('#bluecar').css({
+			    	right:-300+1.6*s
+				});
+				$('#st1').css({
+			    	right:-320+1.8*s
+				});
+				$('#st2').css({
+			    	right:-2020+1.8*s
+				});
+				$('#st3').css({
+			    	right:-4020+1.8*s
+				});
 
-				$('#st3').animate({
-			    		right: wWidth,
-					},5000);
+				if(s>4000){
+					if(landdown == 0){
+						landdown = 1;
+						$('#gm').animate({
+				    		left: wWidth,
+						},1500,function(){
+							$('#gd').animate({
+				    			bottom: -50,
+							},500)
+						});
+					}
+				}
+				// console.log('yoyo')
+				// $body.animate({
+				// 	scrollTop: 300
+				// }, 2000);
+				// $('#gm').animate({
+			 	//    left: leftsp-s,
+				// },2000);
+
+				// if(s>140){
+				// 	$('#st1').animate({
+			 	// 	right: wWidth,
+				// 	},5000);
+				// }
+				// if(s>180){
+				// 	$('#bluecar').animate({
+			 	//    	right: wWidth,
+				// 	},3000,function(){
+				// 		dn();
+				// 	});
+				// }
 				return false;
-			}
+			
+			// if( s>400 && s<600){
+			// 	$body.animate({
+			// 		scrollTop: 600
+			// 	}, 2000);
+			// 	$('#st2').animate({
+			//     		right: wWidth,
+			// 		},5000);
+			// 	return false;
+			// }
+			// if(s>=700 && s<=1000){
+			// 	$body.animate({
+			// 		scrollTop: 1000
+			// 	}, 2000);
+
+			// 	$('#st3').animate({
+			//     		right: wWidth,
+			// 		},5000);
+			// 	return false;
+			// }
 		})
-		function passst1(){
-			$('#st1').addClass('animated flip').animate({
-			    			right: wWidth,
-						},2500)
-		}
-		function dn(){
-			$(this).css('display','none');
-		}
 		</script>
 	</body>
 </html>

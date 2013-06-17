@@ -10,11 +10,23 @@ html{
 	
 }
 body{
+
 }
 #stage1{
 	width: 100%;
-	height: 3000px;
+	height: 4000px;
 	overflow-x:hidden;
+}
+#stage2{
+	width: 100%;
+	height: 3900px;
+	position: absolute;
+	top:4000px;
+	background:url("../img/bg_new.png");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 #gm{
 	width: 90px;
@@ -32,7 +44,7 @@ body{
 #gd{
 	width: 100%;
 	background: #8fc31f;
-	bottom: 0;
+	bottom: -50px;
 	position: fixed;
 	height: 50px;
 	z-index: 5;

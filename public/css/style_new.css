@@ -13,7 +13,7 @@ body{
 }
 #stage1{
 	width: 100%;
-	height: 4000px;
+	height: 5333px;
 	overflow-x:hidden;
 }
 #stage2{
@@ -103,7 +103,32 @@ body{
 #sp1{
 	width: 100%;
 	height: 50px;
-	top:1000px;
+	top:1300px;
 	position: absolute;
 	background: #444;
+}
+#sp2{
+	width: 100%;
+	height: 50px;
+	top:2666px;
+	position: absolute;
+	background: #444;
+}
+#sp3{
+	width: 100%;
+	height: 50px;
+	top:3999px;
+	position: absolute;
+	background: #444;
+}
+#land{
+	top:5300px;
+	width: 100%;
+	height:1000px;
+	position: absolute;
+	background: url("../img/land.png");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }

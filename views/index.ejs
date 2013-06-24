@@ -20,7 +20,9 @@
 			<div id="bluecar"></div>
 			<div id="sp1"></div>
 			<div id="st1"></div>
+			<div id="sp2"></div>
 			<div id="st2"></div>
+			<div id="sp3"></div>
 			<div id="st3"></div>
 		</div>
 		<div id="land"></div>
@@ -48,15 +50,28 @@
 		var landdown = 0;
 		//reference: http://johnpolacek.github.io/superscrollorama/
 		var c = $.superscrollorama();
+		//sp1 第一幕出現
 		c.addTween(50, TweenMax.to($('#gd'), 1, {css:{bottom:0}, ease:Quad.easeOut}));
 		c.addTween(50, TweenMax.fromTo( $('#gm'), 0.8, {css:{bottom:0,left: '-100px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{left: leftsp,bottom:50}, ease:Quad.easeInOut}))
 		c.addTween('#sp1', TweenMax.fromTo( $('#pinkcar'), 1.5, {css:{right: '-200px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{right: '100%'}, ease:Quad.easeInOut}));
 		c.addTween('#sp1', TweenMax.to($('#bluecar'), 2, {css:{right: '100%'}, ease:Quad.easeOut}));
 		c.addTween('#sp1', TweenMax.to($('#st1'), 3, {css:{right: '100%'}, ease:Quad.easeOut}));
-		
-
-
-
+		//sp2 第二幕出現
+		c.addTween('#sp2', TweenMax.to($('#st2'), 3, {css:{right: '100%'}, ease:Quad.easeOut}));
+		//sp3第三幕出現
+		c.addTween('#sp3', TweenMax.to($('#st3'), 3, {css:{right: '100%'}, ease:Quad.easeOut}));
+		//平面跟陸地切換
+		//c.addTween(5333, TweenMax.fromTo( $('#gm'), 0.8, {css:{bottom:50,left: leftsp}, immediateRender:true, ease:Quad.easeInOut}, {css:{left:'100%',bottom:50}, ease:Quad.easeInOut}))
+		c.addTween(5333, TweenMax.to($('#gd'), .2, {css:{bottom: '-50px'}, ease:Quad.easeOut}));
+		$(window).bind('scroll',function(e){
+		 	var s = $(window).scrollTop();
+		 	if(s< 5400){
+		 		$('body').css('background','#80cce3');
+		 	}
+		 	if(s>= 5400){
+		 		$('body').css('background','#80cce3');
+		 	}
+		 })
 		// scrollorama.onBlockChange(function(e) {
 		// 	console.log(e);
 		// })

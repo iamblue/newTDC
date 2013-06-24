@@ -4,112 +4,160 @@
 		<title>台北設計之都</title>
 		<link rel='stylesheet' href='/css/style_new.css' />
 		<link rel='stylesheet' href='/css/animate.css' />
+		<script src="/js/EasePack.js"></script>
+		<script src="/js/CSSPlugin.js"></script>
+		<script src="/js/TweenLite.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.9.8/TweenMax.min.js"></script>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="/js/jquery.superscrollorama.js"></script>
 	</head>
 	<body>
-		<div id="stage1">
+		<div id="stage1" class="scrollblock">
+			<div class="aaa" style="position:absolute;top:0;left:0;width:30px;height:30px;background:red">
 			<div id="gm" data-arrived=""></div>
 			<div id="gd"></div>
 			<div id="pinkcar"></div>
 			<div id="bluecar"></div>
+			<div id="sp1"></div>
 			<div id="st1"></div>
 			<div id="st2"></div>
 			<div id="st3"></div>
 		</div>
-		<div id="stage2">
-		</div>
+		<div id="land"></div>
+		<div id="is1"></div>
+		<div id="is2"></div>
+		<div id="is3"></div>
+		<div id="is4"></div>
+		<!-- <div id="ufo"></div> -->
+		<div id="taiwan"></div>
+		<!-- <div id="stage2" class="scrollblock">
+			<div id="ufo"></div>
+		</div> -->
 		<script type="text/javascript">
 		var wWidth = $(window).width();//計算視窗大小
 		var hHeight = $(window).height();//計算視窗大小
 		var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
 		var leftsp = (wWidth - 90)/2; //計算人物跟最右邊的框框距離
+		//初始預設視窗頂點
 		$('#stage1').animate({
 				scrollTop: 0
 			},2000);
-		$('#gd').animate({
-			    	bottom: 0,
-				},500,function(){
-					$('#gm').animate({
-			    		left: leftsp,
-					},1500);
-				});
-		var landdown = 0;
 		$body.animate({
 			scrollTop: 0
 		});
-		$(window).bind('scroll',function(e){
-			var s = $(window).scrollTop();
-			console.log(s);
-				$('#pinkcar').css({
-			    	right:-200+2*s
-				});
-				$('#bluecar').css({
-			    	right:-300+1.6*s
-				});
-				$('#st1').css({
-			    	right:-320+1.8*s
-				});
-				$('#st2').css({
-			    	right:-2020+1.8*s
-				});
-				$('#st3').css({
-			    	right:-4020+1.8*s
-				});
+		var landdown = 0;
+		//reference: http://johnpolacek.github.io/superscrollorama/
+		var c = $.superscrollorama();
+		c.addTween(50, TweenMax.to($('#gd'), 1, {css:{bottom:0}, ease:Quad.easeOut}));
+		c.addTween(50, TweenMax.fromTo( $('#gm'), 0.8, {css:{bottom:0,left: '-100px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{left: leftsp,bottom:50}, ease:Quad.easeInOut}))
+		c.addTween('#sp1', TweenMax.fromTo( $('#pinkcar'), 1.5, {css:{right: '-200px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{right: '100%'}, ease:Quad.easeInOut}));
+		c.addTween('#sp1', TweenMax.to($('#bluecar'), 2, {css:{right: '100%'}, ease:Quad.easeOut}));
+		c.addTween('#sp1', TweenMax.to($('#st1'), 3, {css:{right: '100%'}, ease:Quad.easeOut}));
+		
 
-				if(s>4000){
-					if(landdown == 0){
-						landdown = 1;
-						$('#gm').animate({
-				    		left: wWidth,
-						},1500,function(){
-							$('#gd').animate({
-				    			bottom: -50,
-							},500)
-						});
-					}
-				}
-				// console.log('yoyo')
-				// $body.animate({
-				// 	scrollTop: 300
-				// }, 2000);
-				// $('#gm').animate({
-			 	//    left: leftsp-s,
-				// },2000);
 
-				// if(s>140){
-				// 	$('#st1').animate({
-			 	// 	right: wWidth,
-				// 	},5000);
-				// }
-				// if(s>180){
-				// 	$('#bluecar').animate({
-			 	//    	right: wWidth,
-				// 	},3000,function(){
-				// 		dn();
-				// 	});
-				// }
-				return false;
+
+		// scrollorama.onBlockChange(function(e) {
+		// 	console.log(e);
+		// })
+		//var stg1 = $(".aaa")
+		//TweenLite.to($body, 2, {top:"100px"});
+		// $(window).bind('scroll',function(e){
+		// 	var s = $(window).scrollTop();
+		// 	console.log(s);
+		// 		$('#pinkcar').css({
+		// 	    	right:-200+2*s
+		// 		});
+		// 		$('#bluecar').css({
+		// 	    	right:-300+1.6*s
+		// 		});
+		// 		$('#st1').css({
+		// 	    	right:-320+1.8*s
+		// 		});
+		// 		$('#st2').css({
+		// 	    	right:-2020+1.8*s
+		// 		});
+		// 		$('#st3').css({
+		// 	    	right:-4020+1.8*s
+		// 		});
+		// 		if(s>3200 && s<=4000 && $body.queue("fx").length == 0){
+		// 			if(landdown == 1){
+		// 				// $('#gm').animate({
+		// 			 //    		left: leftsp,
+		// 				// 	},1500,function(){
+		// 				// 		$('#gd').animate({
+		// 			 //    			bottom: 0,
+		// 				// 		},500)
+		// 				// 	});
+		// 				$('#gd').animate({
+		// 					bottom:0
+		// 				},function(){
+		// 					$("#gm").animate({
+		// 						left:leftsp
+		// 					})
+		// 				})
+		// 				landdown = 0;
+		// 			}
+		// 		}
+		// 		if(s>3200 && $body.queue("fx").length == 0){
+		// 			if(landdown == 0){
+		// 				landdown = 1;
+		// 				$('#gm').animate({
+		// 		    		left: leftsp+3*(s-3200),
+		// 				},function(){
+		// 					$('#gd').animate({
+		// 		    			bottom: -(s-3200),
+		// 					})
+		// 				});
+		// 			}
+		// 		}
+		// 		if(s>7000 && s<7800 && $body.queue("fx").length == 0){
+		// 			$('#ufo').animate({
+		// 				right:s-6900-500
+		// 			})
+		// 		}
+		// 		// console.log('yoyo')
+		// 		// $body.animate({
+		// 		// 	scrollTop: 300
+		// 		// }, 2000);
+		// 		// $('#gm').animate({
+		// 	 	//    left: leftsp-s,
+		// 		// },2000);
+
+		// 		// if(s>140){
+		// 		// 	$('#st1').animate({
+		// 	 	// 	right: wWidth,
+		// 		// 	},5000);
+		// 		// }
+		// 		// if(s>180){
+		// 		// 	$('#bluecar').animate({
+		// 	 	//    	right: wWidth,
+		// 		// 	},3000,function(){
+		// 		// 		dn();
+		// 		// 	});
+		// 		// }
+		// 		return false;
 			
-			// if( s>400 && s<600){
-			// 	$body.animate({
-			// 		scrollTop: 600
-			// 	}, 2000);
-			// 	$('#st2').animate({
-			//     		right: wWidth,
-			// 		},5000);
-			// 	return false;
-			// }
-			// if(s>=700 && s<=1000){
-			// 	$body.animate({
-			// 		scrollTop: 1000
-			// 	}, 2000);
+		// 	// if( s>400 && s<600){
+		// 	// 	$body.animate({
+		// 	// 		scrollTop: 600
+		// 	// 	}, 2000);
+		// 	// 	$('#st2').animate({
+		// 	//     		right: wWidth,
+		// 	// 		},5000);
+		// 	// 	return false;
+		// 	// }
+		// 	// if(s>=700 && s<=1000){
+		// 	// 	$body.animate({
+		// 	// 		scrollTop: 1000
+		// 	// 	}, 2000);
 
-			// 	$('#st3').animate({
-			//     		right: wWidth,
-			// 		},5000);
-			// 	return false;
-			// }
-		})
+		// 	// 	$('#st3').animate({
+		// 	//     		right: wWidth,
+		// 	// 		},5000);
+		// 	// 	return false;
+		// 	// }
+		// })
 		</script>
 	</body>
 </html>

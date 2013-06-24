@@ -12,29 +12,33 @@
 		<script src="/js/jquery.superscrollorama.js"></script>
 	</head>
 	<body>
-		<div id="stage1" class="scrollblock">
-			<div class="aaa" style="position:absolute;top:0;left:0;width:30px;height:30px;background:red">
-			<div id="gm" data-arrived=""></div>
-			<div id="gd"></div>
-			<div id="pinkcar"></div>
-			<div id="bluecar"></div>
-			<div id="sp1"></div>
-			<div id="st1"></div>
-			<div id="sp2"></div>
-			<div id="st2"></div>
-			<div id="sp3"></div>
-			<div id="st3"></div>
+		<div id="frr">
+			<div id="stage1" class="scrollblock">
+				<div class="aaa" style="position:absolute;top:0;left:0;width:30px;height:30px;background:red">
+				<div id="gm" data-arrived=""></div>
+				<div id="gd"></div>
+				<div id="pinkcar"></div>
+				<div id="bluecar"></div>
+				<div id="sp1"></div>
+				<div id="st1"></div>
+				<div id="sp2"></div>
+				<div id="st2"></div>
+				<div id="sp3"></div>
+				<div id="st3"></div>
+			</div>
+			<div id="sea">
+				<div id="land"></div>
+				
+				<div id="is1"></div>
+				<div id="is2"></div>
+				<div id="is3"></div>
+				<div id="is4"></div>
+				<div id="is5"></div>
+				<div id="taiwan"></div>
+			</div>
+			
 		</div>
-		<div id="land"></div>
-		<div id="is1"></div>
-		<div id="is2"></div>
-		<div id="is3"></div>
-		<div id="is4"></div>
-		<!-- <div id="ufo"></div> -->
-		<div id="taiwan"></div>
-		<!-- <div id="stage2" class="scrollblock">
-			<div id="ufo"></div>
-		</div> -->
+		<div id="boat"></div>
 		<script type="text/javascript">
 		var wWidth = $(window).width();//計算視窗大小
 		var hHeight = $(window).height();//計算視窗大小
@@ -61,17 +65,68 @@
 		//sp3第三幕出現
 		c.addTween('#sp3', TweenMax.to($('#st3'), 3, {css:{right: '100%'}, ease:Quad.easeOut}));
 		//平面跟陸地切換
-		//c.addTween(5333, TweenMax.fromTo( $('#gm'), 0.8, {css:{bottom:50,left: leftsp}, immediateRender:true, ease:Quad.easeInOut}, {css:{left:'100%',bottom:50}, ease:Quad.easeInOut}))
 		c.addTween(5333, TweenMax.to($('#gd'), .2, {css:{bottom: '-50px'}, ease:Quad.easeOut}));
+		var r1 = 0, r2 = 0,r3 = 0,r4 = 0;
 		$(window).bind('scroll',function(e){
 		 	var s = $(window).scrollTop();
-		 	if(s< 5400){
-		 		$('body').css('background','#80cce3');
+		 	console.log(s);
+		 	if(s< 6000){
+		 		$('#boat').css({
+		 			'right':-400,
+		 			'top:':300,
+		 			'position':'fixed',
+		 			'display':'block'
+		 		});
 		 	}
-		 	if(s>= 5400){
-		 		$('body').css('background','#80cce3');
+		 	if(s>= 6000 && s < 6950){
+		 		$('#boat').css({
+		 			'right':-400+s-5800,
+		 			'top:':'300px',
+		 			'position':'fixed',
+		 			'display':'block'
+		 		});
+		 		r1 = -400+s-5800
 		 	}
-		 })
+		 	if(s>= 6950 && s<7601){
+		 		$('#boat').css({
+		 			'right':r1-(s-6950),
+		 			'top:':'300px',
+		 			'position':'fixed',
+		 			'display':'block'
+		 		});
+		 		r2 = r1-(s-6950)
+		 	}
+		 	if(s>7601 && s<=8300){
+		 		$('#boat').css({
+		 			'right':r2+(s-7601),
+		 			'top:':'300px',
+		 			'position':'fixed',
+		 			'display':'block'
+		 		});
+		 		r3 = r2+(s-7601);
+		 	}
+		 	if(s>8300 && s<= 9163){
+		 		$('#boat').css({
+		 			'right':r3-(s-8300),
+		 			'top:':'300px',
+		 			'position':'fixed',
+		 			'display':'block'
+		 		});
+		 		r4 = r3-(s-8300);	
+		 	}
+		 	if(s>9163 ){
+		 		$('#boat').css({
+		 			'right':r4+(s-9163),
+		 			'top:':'300px',
+		 			'position':'fixed',
+		 			'display':'block'
+		 		});	
+		 	}
+		})
+		//最後一幕
+		
+
+		
 		// scrollorama.onBlockChange(function(e) {
 		// 	console.log(e);
 		// })

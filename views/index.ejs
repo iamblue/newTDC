@@ -28,15 +28,14 @@
 			</div>
 			<div id="sea">
 				<div id="land"></div>
-				
 				<div id="is1"></div>
 				<div id="is2"></div>
 				<div id="is3"></div>
 				<div id="is4"></div>
 				<div id="is5"></div>
-				<div id="taiwan"></div>
 			</div>
-			
+			<div id="ufo"></div>
+			<div id="taiwan"></div>
 		</div>
 		<div id="boat"></div>
 		<script type="text/javascript">
@@ -124,9 +123,11 @@
 		 	}
 		})
 		//最後一幕
-		
-
-		
+		c.addTween(11333, TweenMax.to($('#taiwan'), .2, {css:{bottom:0,display:'block',opacity: 1}, ease:Quad.easeOut}));
+		c.addTween(11333, TweenMax.to($('#ufo'), .2, {css:{right:140,display:'block',opacity: 1}, ease:Quad.easeOut,onStart:shake}));
+		function shake(){
+			$('#ufo').addClass('animated shake');
+		}
 		// scrollorama.onBlockChange(function(e) {
 		// 	console.log(e);
 		// })

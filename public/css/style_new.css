@@ -27,18 +27,6 @@ body{
 	-o-background-size: cover;
 	background-size: cover;
 }
-#ufo{
-	z-index: 21;
-	position: fixed;
-	top:0;
-	right:-600px;
-	height:600px;
-	width: 100%;
-	/*display: none;*/
-	background: url('../img/ufo.svg');
-	background-size: 100% 100%;
-}
-
 #gm{
 	width: 90px;
 	height:120px;
@@ -201,16 +189,13 @@ body{
 }
 #taiwan{
 	width: 100%;
-	height: 630px;
-	/*left: 0;*/
-	position: absolute;
-	/*-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;	
-	*/
+	height: 50%;
+	position: fixed;
+	display: none;
+	opacity: 0;
 	background: url('../img/taiwan.svg');
-	bottom: 0px;
+	bottom: -300px;
+	background-size: 100% 100%;
 }
 #frr{
 	width: 100%;
@@ -232,4 +217,17 @@ body{
 	-o-background-size: cover;
 	background-size: cover;	
 	background: url('../img/boat.png');	
+}
+#ufo{
+	z-index: 21;
+	position: fixed;
+	top:-50px;
+	right:-600px;
+	height:600px;
+	width: 600px;
+	display: none;
+	opacity: 0;
+	/*display: none;*/
+	background: url('../img/ufo.svg');
+	background-size: 100% 100%;
 }

@@ -189,11 +189,11 @@ body{
 }
 #is5{
 	width: 600px;
-	height:350px;
+	height:260px;
 	background: url("../img/taipei.svg");
-	top:4500px;
+	top:4700px;
 	position: absolute;
-	right: -100px;
+	right: 0px;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

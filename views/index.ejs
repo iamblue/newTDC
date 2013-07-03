@@ -124,10 +124,12 @@
 		})
 		//最後一幕
 		c.addTween(11333, TweenMax.to($('#taiwan'), .2, {css:{bottom:0,display:'block',opacity: 1}, ease:Quad.easeOut}));
-		c.addTween(11333, TweenMax.to($('#ufo'), .2, {css:{right:140,display:'block',opacity: 1}, ease:Quad.easeOut,onStart:shake}));
-		function shake(){
-			$('#ufo').addClass('animated shake');
+		c.addTween(11333, TweenMax.to($('#ufo'), .2, {css:{right:140,display:'block',opacity: 1}, ease:Quad.easeOut,onStart:shake(ufo)}));
+		function shake(item){
+			var name = '#'+item
+			$(name).addClass('animated shake');
 		}
+
 		// scrollorama.onBlockChange(function(e) {
 		// 	console.log(e);
 		// })
